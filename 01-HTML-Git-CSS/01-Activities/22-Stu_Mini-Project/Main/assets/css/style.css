@@ -9,7 +9,7 @@ body {
   position: relative;
   font-family: "Goudy Bookletter 1911", sans-serif;
   font-size: 20px;
-  background-color: #FDF8F5;
+  background-color: pink;
   color: #4F4846;
 }
 
@@ -110,4 +110,16 @@ button {
 
 .text-right {
   text-align: right;
+}
+
+
+
+.user {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.user .firstname {
+  font-weight: bold;
+  display: block;
 }
