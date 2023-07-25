@@ -1,0 +1,50 @@
+.lesson  {
+  background-color: lemonchiffon;
+}
+
+#paragraph-1 {
+  color: darkslateblue;
+  background-color: white;
+}
+
+#paragraph-2 {
+  color: darkslateblue;
+  background-color: darkorange;
+}
+
+#paragraph-3 {
+    color: white;
+    background-color: darkslateblue;
+}
+
+
+
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: blue;
+}
+
+h2 {
+  color: magenta;
+}
+
+#uncc {
+  color: green;
+}
+
+#uncc .webdevs {
+  color: orange;
+}
+
+#uncc .webdevs.ft {
+  color: cyan;
+}
+
+img {
+  
+  filter: blur(5);
+}
