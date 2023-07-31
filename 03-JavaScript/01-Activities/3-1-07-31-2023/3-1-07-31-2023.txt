@@ -7,11 +7,11 @@ Happy Monday, everyone! 👋 It's time to dive into the exciting world of progra
 I'll be online at 5:30 PM (EST) if you need help with anything. Otherwise; see you all at 6:30 PM (EST) tonight. ⏰
 
 Module: 3 - JavaScript
-Link: https://courses.bootcampspot.com/courses/3984/pages/3-module-03-javascript?module_item_id=1029975
+Canvas: https://courses.bootcampspot.com/courses/3984/pages/3-module-03-javascript?module_item_id=1029975
 
 Module: 3.1 (week 3, day 1) - Introduction to JavaScript (3-1-07-31-2023)
 Activities: 01-Ins_Script-ConsoleLog through 10-Stu_Conditional-Statements
-Link: https://courses.bootcampspot.com/courses/3984/pages/03-dot-1-introduction-to-javascript?module_item_id=1029989
+Canvas: https://courses.bootcampspot.com/courses/3984/pages/03-dot-1-introduction-to-javascript?module_item_id=1029989
 
 *** I've done a "git push" please do a "git pull" in your directory:
 2023-edx\UNCC-VIRT-FSF-PT-07-2023-U-LOLC
