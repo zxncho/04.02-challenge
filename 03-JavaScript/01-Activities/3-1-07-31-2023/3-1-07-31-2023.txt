@@ -1,0 +1,37 @@
+@everyone 
+
+07/31/2023 Standing
+
+Happy Monday, everyone! 👋 It's time to dive into the exciting world of programming 🎮. Complex?  You'll be surprised how much you will recognize! With time, strategic thinking, problem-solving, and decision-making, you'll breeze through anything 🏁
+
+I'll be online at 5:30 PM (EST) if you need help with anything. Otherwise; see you all at 6:30 PM (EST) tonight. ⏰
+
+Module: 3 - JavaScript
+Link: https://courses.bootcampspot.com/courses/3984/pages/3-module-03-javascript?module_item_id=1029975
+
+Module: 3.1 (week 3, day 1) - Introduction to JavaScript (3-1-07-31-2023)
+Activities: 01-Ins_Script-ConsoleLog through 10-Stu_Conditional-Statements
+Link: https://courses.bootcampspot.com/courses/3984/pages/03-dot-1-introduction-to-javascript?module_item_id=1029989
+
+*** I've done a "git push" please do a "git pull" in your directory:
+2023-edx\UNCC-VIRT-FSF-PT-07-2023-U-LOLC
+
+Keywords: console, script, conditions, true/false, equals, function, variable, object
+
+Zoom Link: https://zoom.us/j/91326464344
+
+2-3-07-27-2023 Recording: https://zoom.us/rec/play/FNpvnwBYwxUuq46UIgUi-mLIBOaZZeJw0xGuzK32RVXdJ_xsumqXUjDOF5MARdeKJGB5KIxnVwIKjhCa.MBXB9kGreAu0KQfJ
+
+PRE-CLASS DRILL: Explain this code to me in a private Slack message -- comment each line or write a list explaining each line.
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
