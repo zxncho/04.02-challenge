@@ -1,0 +1,49 @@
+@everyone 
+
+08/01/2023 Standing
+
+Buenos dias everyone 🌞👋!! Today we inch closer to understanding the 3 basic things that make up our world wide web (WWW). HTML, CSS & JavaScript. On your 3rd week, you honestly have learned more than I did in 6 months 🤯. So I would like to personally say, I'm blown away about how much further each one of you has come. Kudos to you. Patience, practice, and perseverance 🚀🌟
+
+***** If you need 1:1 to knockout your module challenges, please ask. I'll keep my Slack open throughout the day today.
+
+I'll be on Zoom at 5:30 PM (EST) if you need help with anything. Otherwise; see you all at 6:30 PM (EST) tonight. ⏰
+
+Module: 3.2 (week 3, day 2) - Arrays and Functions (3-2-08-01-2023)
+Activities: 11-Ins_Arrays through 20-Stu_Methods
+Keywords: array, object, function, var (variable), for, loop, scope
+Canvas: https://courses.bootcampspot.com/courses/3984/pages/03-dot-2-arrays-and-functions?module_item_id=1029994
+
+*** I've done a "git push" please do a "git pull" in your directory:
+2023-edx\UNCC-VIRT-FSF-PT-07-2023-U-LOLC
+
+Zoom: https://zoom.us/j/96847454371
+
+2-3-07-31-2023 Recording: https://zoom.us/rec/play/QNYtTqHB7PB-B4gKXmX-0m4HlZJPsX4h-qNcqDx29SAhTz4_Vfb0ZXlbtKvkcmZLeUw09I-ZaWBATBWi.0TyH6vHrC4FUq4VQ
+
+***** PRE-CLASS DRILL (private message me your answers on Slack) *****
+
+-- What is a box model?
+
+A) The term box model is way of referencing the space that an element takes up on a page.
+
+B) The term box model is way of referencing the space that a window takes up on a desktop.
+
+Answer: ?
+
+-- What 4 components make up a box model?
+
+A) ruler, cardboard, tape, content
+
+B) margin, border, padding, content
+
+C) order, border, padding, content
+
+Answer: ?
+
+-- Which of these CSS properties are related to the box model?
+
+A) width, height, padding, border, margin
+
+B) length, height, padding, border, margin
+
+Answer: ?
