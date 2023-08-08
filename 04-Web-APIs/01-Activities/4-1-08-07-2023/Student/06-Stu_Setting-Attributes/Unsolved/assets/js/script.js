@@ -21,3 +21,26 @@ site3El.children[1].children[0].setAttribute("alt", "women working");
 site3El.children[1].children[0].setAttribute("style", "padding:10px;");
 
 // Write Your Code Below
+
+//var h4Headers = document.querySelectorAll("h4");
+
+var h4Headers = [
+    document.getElementById('first_header'),
+    document.getElementById('second_header')
+]
+
+
+for (var i = 0; i < h4Headers.length; i++) {
+
+    console.log(h4Headers[i], h4Headers[i].style);
+
+    //h4Headers[i].setAttribute("style", "font-size: 30px; color: blue; font-weight: bold; padding-left: 10px; margin: 0;");
+
+    h4Headers[i].style.color = 'blue';
+    h4Headers[i].style.margin = '0px';
+    h4Headers[i].style.paddingLeft = '0px';
+    h4Headers[i].style.fontSize = '30px';
+
+
+
+}

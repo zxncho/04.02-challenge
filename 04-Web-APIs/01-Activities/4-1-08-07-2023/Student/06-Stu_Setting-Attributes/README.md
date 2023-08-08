@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when all the `<h4>` elements are selected and stored in a single variable.
+--* It's done when all the `<h4>` elements are selected and stored in a single variable.
 
 * It's done when the text of each `<h4>` is set to `blue`, the font size is `30px`, and the text is `bold`.
 

@@ -1,3 +1,15 @@
+var htmlList = document.createElement('ul')
+
+document.body.appendChild(htmlList);
+
+
+var listItem = document.createElement('li');
+
+listItem.textContent = "User 1 (Sally Smith)";
+
+
+/*
+
 // Stores user response in variable
 var tagName = prompt("Please enter an HTML Tag (ex. h1, h2, p, div):", "enter tag");
 
@@ -26,3 +38,5 @@ if (nextTag === true) {
     document.body.appendChild(secondTag);
   }
 }
+
+*/

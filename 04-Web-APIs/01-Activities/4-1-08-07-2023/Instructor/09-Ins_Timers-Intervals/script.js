@@ -6,9 +6,11 @@ var mainEl = document.getElementById("main");
 
 var secondsLeft = 10;
 
+var timerInterval;
+
 function setTime() {
   // Sets interval in variable
-  var timerInterval = setInterval(function() {
+ timerInterval = setInterval(function() {
     secondsLeft--;
     timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
 
@@ -20,6 +22,9 @@ function setTime() {
     }
 
   }, 1000);
+
+  console.log(timerInterval);
+
 }
 
 // Function to create and append colorsplosion image
