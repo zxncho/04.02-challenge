@@ -3,10 +3,10 @@ var timer = document.getElementById (".timer")
 function countdown() {
     var startingTime = 60;
 
-    var timeRemaining = setInterval(function (){
+    var timeRemaining = setInterval(function) (){
 
         if (timeRemaining > 0);
-        timer.textContent = startingTime + 'seconds remaining';
+        timer.textContent = startingTime + 'seconds remaining'; 
         timeRemaining --;
     }
 
