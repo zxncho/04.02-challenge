@@ -8,17 +8,43 @@
     <title>JavaScript Quiz</title>
 </head>
 <body>
-    <header>
-     <div class="scores"></div>
-     <div class="timer"></div>
-    </header>
-    <section class="wrapper">
+ <header>
+    <div class="scores"><a href="highscores.html">View High Scores</a></div>
+    <div class="timer">Time: <span id="time"></span></div>
+</header>
+
+    <section class="main">
         <div>
         <h2>Coding Quiz Challenge</h2>
-        <p id="questions">Instructions</p>
-        <button>Start the Quiz</button>
+        <p> 
+            Try to answer the following code-related questions within the time
+            limit. Keep in mind that incorrect answers will penalize your
+            score/time by 15 seconds!
+        </p>
+        <button id="start-quiz">Start the Quiz</button>
         </div>
-        <div class="questions"></div>
+
+    <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+    </div>
+
+    
+    <div id="summary" class="hide">
+        <h2>All done!</h2>
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>
+          Enter name: <input type="text" id="playerName" max="40" />
+          <button id="submit">Submit</button>
+        </p>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
+  </body>
     </section>
 </body>
 </html>
