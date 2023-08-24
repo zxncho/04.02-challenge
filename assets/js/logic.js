@@ -1,15 +1,15 @@
 var currentQuestionIndex = 0;
 var time = questions.length *20;
-var timeId
+var timeId;
 var timer = document.getElementById ("time");
 var allQuestions = document.getElementById('questions');
 var allChoices = document.getElementById('choices');
 var initials = document.getElementById('playerName');
 var feedback = document.getElementById('feedback');
 var submit = document.getElementById('submit');
-var start = document.getElementById('start-quiz')
-var soundRight = new Audio('/assets/sfx/correct.wav')
-var soundWrong = new Audio('/assets/sfx/incorrect.wav')
+var start = document.getElementById('start-quiz');
+var soundRight = new Audio('/assets/sfx/correct.wav');
+var soundWrong = new Audio('/assets/sfx/incorrect.wav');
 
 function startQuiz ()
     {
@@ -19,11 +19,11 @@ function startQuiz ()
 
 allQuestions.removeAttribute =('class');
 
-timeId = setInterval(() 
+timeId = setInterval() 
     {
         timer.textContent = time;
         getQuestion()
-    },1000);
+    },1000;
 
 function getQuestion(){
     var currentQuestion = questions[currentQuestionIndex];
