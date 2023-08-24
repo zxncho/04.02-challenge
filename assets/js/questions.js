@@ -2,7 +2,7 @@ var questions = [
     {
 
     let answers ="";
-    let answersArray =[]
+    let answersArray=[]
 
       title: 'Commonly used data types DO NOT include:',
       choices: ['strings', 'booleans', 'alerts', 'numbers'],
