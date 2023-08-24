@@ -1,4 +1,4 @@
-var timer = document.getElementById (".timer");
+var timer = document.getElementById ("time");
 
 function countdown() {
     var startingTime = 60;
@@ -23,6 +23,6 @@ function countdown() {
     }
 
     function questionflip () {
-        
+
     }
 }
