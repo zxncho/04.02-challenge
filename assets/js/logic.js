@@ -18,7 +18,7 @@ function startQuiz() {
 
     allQuestions.removeAttribute = ('class');
 
-    timeId = setInterval(clockTick, 1000);
+    timeId = setInterval(clock, 1000);
 
     timer.textContent = time;
 
@@ -35,7 +35,7 @@ function getQuestion() {
 
     for (var i = 0; i < currentQuestion.choices.length; i++) {
         var choice = currentQuestion.choices[i];
-        var choiceNode = document.createElement('button');
+        var choiceNode = document.createElement('button1');
         choiceNode.setAttribute('class', 'choices');
         choiceNode.setAtrribute('value', choice);
 
@@ -132,7 +132,7 @@ function checkForEnter(event) {
 
 submitBtn.onclick = saveScores;
 start.onclick = startQuiz;
-allChoices.onclick = questionClick;
-initials.onkeyup = checkForEnter;
+allChoices.onclick = clickQuestion;
+initialsE1.onkeyup = checkForEnter;
 
 
