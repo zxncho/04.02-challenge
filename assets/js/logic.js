@@ -53,12 +53,19 @@ function getQuestion() {
     }
 }
 
+//the following function is to hide the choice buttons from the previous questions 
+function hideChoices() {
+    var choiceButtons = allChoices.getElementsByTagName('button');
+    for (var i = 0; i < choiceButtons.length; i++) {
+        choiceButtons[i].style.display = 'none';
+    }
+}
+
+
 //the following function outlines the event that happens when clicking an answer 
 
 function clickAnswer(event) {
     var button1 = event.target;
-
-    console.log (button1.textContent)
 
     if (!button1.matches('button')) {
         return;
@@ -77,17 +84,10 @@ function clickAnswer(event) {
         }
 
     timer.textContent = time;
-  
-
     soundWrong.play();
-
     feedback.textContent = 'Wrong answer!';
-    
-    return;
-
     } else {
         soundRight.play();
-
         feedback.textContent = 'Correct!';
         }
 
@@ -96,12 +96,14 @@ function clickAnswer(event) {
         feedback.setAttribute('class', 'feedback-hide');
     }, 1000);
 
+    hideChoices();
+
     currentQuestionIndex++;
 
     if (time <= 0 || currentQuestionIndex === questions.length) {
         quizEnd();
     } else {
-        getQuestion();
+       getQuestion();
     }
 }
 
