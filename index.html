@@ -27,7 +27,9 @@
 
     <div id="questions" class="hide">
         <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
+        <div id="choices"></div>
+        <audio id="right" src='./assets/sfx/correct.wav'></audio>
+        <audio id="wrong" src='./assets/sfx/correct.wav'></audio>
     </div>
 
     
@@ -35,7 +37,7 @@
         <h2>All done!</h2>
         <p>Your final score is <span id="final-score"></span>.</p>
         <p>
-          Enter name: <input type="text" id="playerName" max="40" />
+          Enter name: <input type="text" id="playerName" max="40" placeholder="Type your name here"/>
           <button id="submit">Submit</button>
         </p>
       </div>

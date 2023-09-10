@@ -1,6 +1,7 @@
 var currentQuestionIndex = 0;
 var time = questions.length * 20;
 var timeId;
+
 var timer = document.getElementById("time");
 var allQuestions = document.getElementById('questions');
 var allChoices = document.getElementById('choices');
@@ -8,94 +9,116 @@ var initialsE1 = document.getElementById('playerName');
 var feedback = document.getElementById('feedback');
 var submitBtn = document.getElementById('submit');
 var start = document.getElementById('start-quiz');
-var soundRight = new Audio('/assets/sfx/correct.wav');
-var soundWrong = new Audio('/assets/sfx/incorrect.wav');
 
+var soundRight = new Audio ('./assets/sfx/correct.wav');
+var soundWrong = new Audio ('./assets/sfx/incorrect.wav');
+
+//This function kicks off the quiz
 function startQuiz() {
-    var start = document.getElementById('start-quiz')
-    start.setAttribute('class', 'hide')
-        ;
-
+    var start = document.getElementById('start-quiz');
+    start.setAttribute('class','hide');
     allQuestions.removeAttribute = ('class');
-
     timeId = setInterval(clock, 1000);
-
     timer.textContent = time;
-
-    getQuestion();
+     getQuestion();
 }
 
+// this function allows the question to be rendered from the questions.js document
+
 function getQuestion() {
+
+    choices.innerHTML = ''
+
     var currentQuestion = questions[currentQuestionIndex];
 
     var title = document.getElementById('question-title');
+
     title.textContent = currentQuestion.title;
 
-    allChoices.innerHTML = '';
+     allQuestions.style.display = 'block';
+     
+     //the following code displays all of the choices available for a question as a button
 
     for (var i = 0; i < currentQuestion.choices.length; i++) {
-        var choice = currentQuestion.choices[i];
-        var choiceNode = document.createElement('button1');
-        choiceNode.setAttribute('class', 'choices');
-        choiceNode.setAtrribute('value', choice);
 
-        choiceNode.textContent = i + 1 + ' . ' + choice;
+        var choice = currentQuestion.choices[i];
+        
+        var choiceNode = document.createElement('button');
+ 
+         choiceNode.setAttribute('id', 'choices');
+         
+        choiceNode.textContent = choice;
 
         allChoices.appendChild(choiceNode);
     }
 }
 
-function clickQuestion(event) {
+//the following function outlines the event that happens when clicking an answer 
+
+function clickAnswer(event) {
     var button1 = event.target;
 
-    if (!button1.matches('choice')) {
+    console.log (button1.textContent)
+
+    if (!button1.matches('button')) {
         return;
     }
 
-    if (button1.value !== questions[currentQuestionIndex].answer) {
-        time -= 20;
+    if (!questions[currentQuestionIndex]) {
+        quizEnd();
+        return;
+    }
+
+    if (button1.textContent !== questions[currentQuestionIndex].answer) {
+        time -= 10;
 
         if (time < 0) {
             time = 0;
         }
-    
 
     timer.textContent = time;
+  
 
-    sfxWrong.play();
+    soundWrong.play();
 
     feedback.textContent = 'Wrong answer!';
+    
+    return;
 
-} else {
-    sfxRight.play();
+    } else {
+        soundRight.play();
 
-    feedback.textContent = 'Correct!';
-}
+        feedback.textContent = 'Correct!';
+        }
 
-feedback.setAttribute('class', 'feedback');
-setTimeout(function () {
-    feedback.setAtrribute('class', 'feedback-hide');
-}, 1000);
+    feedback.className === 'feedback';
+    setTimeout(function () {
+        feedback.setAttribute('class', 'feedback-hide');
+    }, 1000);
 
-currentQuestionIndex++;
+    currentQuestionIndex++;
 
-if (time <= 0 || currentQuestionIndex === questions.length) {
-    quizEnd();
-} else {
-    getQuestion();
-}
+    if (time <= 0 || currentQuestionIndex === questions.length) {
+        quizEnd();
+    } else {
+        getQuestion();
+    }
 }
 
 function quizEnd() {
     clearInterval(timeId);
 
     var endScreen = document.getElementById('end-screen');
-    endScreen.removeAttribute('class');
+   var elm =  document.getElementsByTagName(endScreen);
+   
+  try {
+    elm.removeAttribute('class');
+  } catch(err) {};
 
     var finalScore = document.getElementById('final-score');
     finalScore.textContent = time;
 
-    questions.setAtrribute('class', 'hide');
+   allQuestions.setAttribute('class','hide')
 }
 
 function clock() {
@@ -106,15 +129,15 @@ function clock() {
 }
 
 function saveScores() {
-    var initialsE1 = initials.value.trim();
+    var initialsE1 = playerName.value.trim();
 
-    if (initials !== '') {
+    if (initialsE1.value.trim() !=='') {
         var highscores =
             JSON.parse(window.localStorage.getItem('highscores')) || [];
 
         var newScore = {
             score: time,
-            initials: initials,
+            playerName: playerName,
         };
 
         highscores.push(newScore);
@@ -126,13 +149,29 @@ function saveScores() {
 
 function checkForEnter(event) {
     if (event.key === 'Enter') {
-        saveHighscore();
+        saveScores();
     }
 }
 
+if (submitBtn){
 submitBtn.onclick = saveScores;
+}
+
+if(start){
 start.onclick = startQuiz;
-allChoices.onclick = clickQuestion;
+}
+
+
+if (allChoices) {
+    var choiceButtons = allChoices.getElementsByTagName('button');
+    for (var i = 0; i < choiceButtons.length; i++) {
+    choiceButtons[i].addEventListener('click', clickAnswer);
+    }
+}
+
+
+if(initialsE1){
 initialsE1.onkeyup = checkForEnter;
+}
 
-
+allChoices.addEventListener('click',clickAnswer);
