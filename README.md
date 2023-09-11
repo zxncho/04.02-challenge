@@ -6,7 +6,7 @@ This project is a quiz built with HTML,JavaScript and CSS.
 
 ## Code Source
 
-[source-code]()
+[source-code](04-Web-APIs\02-Challenge\Main\assets\css\styles.css)
 
 # Page Link
 
@@ -15,20 +15,9 @@ This project is a quiz built with HTML,JavaScript and CSS.
 # View
 
 
-
-
-## Installation
-
-
-
 ## Usage
 
-
-
-## Credits
-
-
-
+Used as a test of knowledge on subjects related to JavaScript
 
 ## License
 
@@ -54,17 +43,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISINqG FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Badges
-
-
 
 ## Features
 
-
-
-## How to Contribute
-
-
+-start button that kicks off quiz
+-page to hold high scores
+-questions with selectable buttons for answers
+-input for name to attach to high score
 
 ## Tests
 
+There were many tests run on this application before deployment. Most of them are outlined in the issues
+section of the repo. Testing methods used were clicking through the quiz and referencing the console to
+catch any issues.
