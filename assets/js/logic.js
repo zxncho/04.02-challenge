@@ -16,7 +16,9 @@ var soundWrong = new Audio ('./assets/sfx/incorrect.wav');
 //This function kicks off the quiz
 function startQuiz() {
     var start = document.getElementById('start-quiz');
+    var instructions = document.getElementById('instructions');
     start.setAttribute('class','hide');
+    instructions.setAttribute('class','hide');
     allQuestions.removeAttribute = ('class');
     timeId = setInterval(clock, 1000);
     timer.textContent = time;
@@ -110,18 +112,17 @@ function clickAnswer(event) {
 function quizEnd() {
     clearInterval(timeId);
 
-    var endScreen = document.getElementById('end-screen');
-   var elm =  document.getElementsByTagName(endScreen);
-   
-  try {
-    elm.removeAttribute('class');
-  } catch(err) {};
+    allQuestions.setAttribute('class', 'hide');
+
+    var endScreen = document.getElementById('summary');
+    endScreen.removeAttribute('class');
 
     var finalScore = document.getElementById('final-score');
     finalScore.textContent = time;
 
-   allQuestions.setAttribute('class','hide')
+
 }
+
 
 function clock() {
     time--;
@@ -130,12 +131,15 @@ function clock() {
     if (time <= 0) { quizEnd(); }
 }
 
-function saveScores() {
-    var initialsE1 = playerName.value.trim();
 
-    if (initialsE1.value.trim() !=='') {
-        var highscores =
-            JSON.parse(window.localStorage.getItem('highscores')) || [];
+function saveScores(event) {
+    event.preventDefault();
+
+    var initialsE1 = document.getElementById('playerName');
+    var playerName = initialsE1.value.trim();
+
+    if (playerName !== '') {
+        var highscores = JSON.parse(localStorage.getItem('highscores')) || [];
 
         var newScore = {
             score: time,
@@ -149,6 +153,7 @@ function saveScores() {
     }
 }
 
+//Allows the user to click enter instead of button shown to submit their high score
 function checkForEnter(event) {
     if (event.key === 'Enter') {
         saveScores();
@@ -177,3 +182,8 @@ initialsE1.onkeyup = checkForEnter;
 }
 
 allChoices.addEventListener('click',clickAnswer);
+var initialsForm = document.getElementById('initials-form');
+if (initialsForm) {
+    initialsForm.addEventListener('submit', saveScores);
+}
+

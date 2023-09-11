@@ -15,7 +15,7 @@
 </header>
 
     <section class="main">
-        <div>
+        <div id="instructions">
         <h2>Coding Quiz Challenge</h2>
         <p> 
             Try to answer the following code-related questions within the time
@@ -36,10 +36,13 @@
     <div id="summary" class="hide">
         <h2>All done!</h2>
         <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
-          Enter name: <input type="text" id="playerName" max="40" placeholder="Type your name here"/>
-          <button id="submit">Submit</button>
-        </p>
+
+         <form id="initials-form">
+         <label for="playerName">Enter name:</label> 
+         <input type="text" id="playerName" max="40" placeholder="Type your name here"/>
+         <button id="submit">Submit</button>
+         </form>
+
       </div>
 
       <div id="feedback" class="feedback-hide"></div>

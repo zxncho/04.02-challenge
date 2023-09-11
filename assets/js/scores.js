@@ -1,24 +1,18 @@
-function printScores () {
-    var highScores = JSON.parse(window.localStorage.getItem('highscores')) || [];
-};
+document.addEventListener('DOMContentLoaded', function () {
+    var highscoreList = document.getElementById('highscores');
 
-    highScores.sort (function(a,b) {
-        return b.score-a.score;
+    // Retrieve highscores from local storage
+    var highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+
+    // Sort highscores by score in descending order
+    highscores.sort(function (a, b) {
+        return b.score - a.score;
+    });
+
+    // Iterate through highscores and create list items to display them
+    highscores.forEach(function (scoreObj) {
+        var listItem = document.createElement('li');
+        listItem.textContent = scoreObj.playerName + ': ' + scoreObj.score;
+        highscoreList.appendChild(listItem);
+    });
 });
-
-for (var i = 0; i < highScores.length; i+=1) {
-    var listItem = document.createElement('li');
-    listItem.textContent = highScores[i].initials + ' - ' +highScores[i].score;
-
-    var fullList = document.getElementById ('highscores');
-    fullList.appendChild(listItem)
-}
-
-function clearScores () {
-    window.localStorage.removeItem ('highscores');
-    window.location.reload();
-}
-
-document.getElementById('clear').onclick = clearScores;
-
-printScores();
