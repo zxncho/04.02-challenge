@@ -14,6 +14,9 @@ This project is a quiz built with HTML,JavaScript and CSS.
 
 # View
 
+[screenshot](./assets/images/SS1.png)
+[screenshot](./assets/images/SS2.png)
+[screenshot](./assets/images/SS3.png)
 
 ## Usage
 
